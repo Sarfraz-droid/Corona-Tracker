@@ -73,7 +73,6 @@ app.post("/", function(req, res) {
 
     });
 });
-
-app.listen(process.env.PORT || 3000, function(req, res) {
-    console.log("Server started at port 3000");
+app.listen(process.env.PORT || 3000, function() {
+    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 });

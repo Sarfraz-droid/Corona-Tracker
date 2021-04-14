@@ -65,7 +65,7 @@ app.post("/", function(req, res) {
     const url = "https://corona.lmao.ninja/v2/countries/" + query + "?strict=true&yesterday=true#";
 
     https.get(url, function(response) {
-        console.logitg(response.statusCode);
+        console.log(response.statusCode);
         if (response.statusCode != 200 || query === "")
             res.redirect("/error");
         else
